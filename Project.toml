@@ -1,10 +1,14 @@
-name = "TimeTraveller"
+name = "TimeTraveler"
 uuid = "94ef9ff7-d57b-4292-b22e-937746d3b81b"
 authors = ["Frames White <me@oxinabox.net> and contributors"]
 version = "1.0.0-DEV"
 
+[deps]
+Example = "7876af07-990d-54b4-ab0e-23690620f79a"
+
 [compat]
 julia = "1.9"
+Example = "0.5.3"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
