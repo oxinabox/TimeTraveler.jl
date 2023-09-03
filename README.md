@@ -3,29 +3,32 @@
 [![Build Status](https://github.com/oxinabox/TimeTraveler.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/oxinabox/TimeTraveler.jl/actions/workflows/CI.yml?query=branch%3Amain)
 
 
-**Welcome Time Traveler!**
+**Welcome Time Traveler!**  
 
 TimeTraveler.jl is a package designed to make your time adventures more easy and  convenient.
 
-⚠️ Please do not add this as a dependency of your package ⚠️
+⚠️ Please do not add this as a dependency of your package ⚠️  
 Time travel is too dangerous to put in the hands of automated systems.
 Instead add it to your global environment, like Revise etc.
 
 You should also add `using TimeTraveler` to your start-up.jl.
 e.g. by adding to `~/.julia/config/startup.jl`
-``````
+```julia
 try
     using TimeTraveler
 catch e
-    @warn "Error initializing TimeTreveler" exception=e
+    @warn "Error initializing TimeTraveler" exception=e
 end
-``````
+```
 
 
 You can not time-travel to before the machine was built.
 Or more precisely, you can, but you need to know exactly when your destination is. 
-You can use `@back_in_the_day` to travel to world-age proviced as a `UInt64`, but you can't use `@when_freshly_loaded Package` to travel to the time of loading `Package` if that package was loaded before TimeTraveler.jl as we won't have tracked when that was.
+You can use `@back_in_the_day` to travel to world-age provided as a `UInt64`, but you can't use `@when_freshly_loaded Package` to travel to the time of loading `Package` if that package was loaded before TimeTraveler.jl as we won't have tracked when that was.
 
+Be aware you can not modify the past!
+Which is to say you can not define new methods in old world-ages.
+But you can observe it.
 
 ## Use Case
 
